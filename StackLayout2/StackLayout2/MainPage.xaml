@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StackLayout2.MainPage"
+             Visual="Material">
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Spacing="0" Padding="0" BackgroundColor="Maroon">
+                <BoxView HorizontalOptions="FillAndExpand" Color="Gray" HeightRequest="100" VerticalOptions="Start">
+                </BoxView>
+                <Button CornerRadius="30" HeightRequest="60" WidthRequest="60"  BackgroundColor="Red"
+                        HorizontalOptions="Center" VerticalOptions="Start"></Button>
+
+                <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="120" VerticalOptions="Start" Spacing="20">
+                    <Label Text="user name" TextColor="White" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    <Entry Placeholder="Bio + Hashtags" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                           BackgroundColor="LightSalmon"></Entry>
+                </StackLayout>
+
+                <StackLayout BackgroundColor="White" Spacing="0" Orientation="Horizontal" Padding="5"
+                             HeightRequest="50">
+
+                    <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <BoxView BackgroundColor="Black" WidthRequest="40" HeightRequest="40"
+                                 HorizontalOptions="StartAndExpand" VerticalOptions="Center"></BoxView>
+
+                        <Label FontSize="14" Text="Accent Color" TextColor="Black"
+                               HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                        
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="0">
+                        <BoxView BackgroundColor="Red" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center"></BoxView>
+                        <Label FontSize="14" TextColor="Black" Text="Primary Color" HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                    
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="Age" FontSize="14" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"></Label>
+                    <Entry Text="35" TextColor="White" BackgroundColor="Maroon" HorizontalOptions="FillAndExpand"></Entry>
+                    
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="Interets" FontSize="14" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"></Label>
+                    <Entry Text="Xamarin - Devops - Net Core" TextColor="White" BackgroundColor="Maroon" HorizontalOptions="FillAndExpand"></Entry>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="Ask me About" FontSize="14" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"></Label>
+                    <Entry Text="C# - Net - Mobile - Xamarin" TextColor="White" BackgroundColor="Maroon" HorizontalOptions="FillAndExpand"></Entry>
+
+                </StackLayout>
+
+                <StackLayout BackgroundColor="Gray" VerticalOptions="EndAndExpand">
+                    <Button Text="Register...!!" FontSize="17" Margin="5" BackgroundColor="LightSalmon"></Button>
+                </StackLayout>
+
+            </StackLayout>
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+
+</ContentPage>

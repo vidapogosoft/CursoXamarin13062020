@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GridLayout1.App">
+    
+    <Application.Resources>
+            
+        <!--Colores -->
+        <Color x:Key="HeaderTextColor">#585858</Color>
+        <Color x:Key="BodyTextColor">#C3C3C3</Color>
+        <Color x:Key="ButtonBackgroundColor">#5992ff</Color>
+        <Color x:Key="BackgroundColor">White</Color>
+
+        <!--Fuentes -->
+        <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String">
+            <On Platform="ios">HelveticaNeue</On>
+            <On Platform="Android">sans-serif</On>
+        </OnPlatform>
+
+        <OnPlatform x:Key="LightFontFamily" x:TypeArguments="x:String">
+            <On Platform="ios">HelveticaNeue-Light</On>
+            <On Platform="Android">sans-serif-Light</On>
+        </OnPlatform>
+
+        <OnPlatform x:Key="MediumFontFamily" x:TypeArguments="x:String">
+            <On Platform="ios">HelveticaNeue-Medium</On>
+            <On Platform="Android">sans-serif-Medium</On>
+        </OnPlatform>
+
+        <!--Fuentes (tamaños) -->
+        <x:Double x:Key="TitleFontSize">20</x:Double>
+        <x:Double x:Key="BodyFontSize">18</x:Double>
+        <x:Double x:Key="TagTextFontSize">20</x:Double>
+        <x:Double x:Key="StatsNumberFontSize">20</x:Double>
+        <x:Double x:Key="StatsCaptionsFontSize">20</x:Double>
+        <x:Double x:Key="ButtonFontSize">20</x:Double>
+
+        <!--Styles -->
+
+        <Style x:Key="ProfileNameLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}">
+            </Setter>
+
+            <Setter Property="FontFamily" Value="{StaticResource MediumFontFamily}">
+            </Setter>
+
+            <Setter Property="FontSize" Value="{StaticResource TitleFontSize}">
+            </Setter>
+
+            <Setter Property="HorizontalTextAlignment" Value="Center">
+            </Setter>
+
+        </Style>
+
+        <Style x:Key="ProfileTagLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource BodyTextColor}">
+            </Setter>
+
+            <Setter Property="FontFamily" Value="{StaticResource RegularFontfamily}">
+            </Setter>
+
+            <Setter Property="FontSize" Value="{StaticResource TagTextFontSize}">
+            </Setter>
+
+            <Setter Property="HorizontalTextAlignment" Value="Center">
+            </Setter>
+
+        </Style>
+
+    </Application.Resources>
+    
+</Application>
