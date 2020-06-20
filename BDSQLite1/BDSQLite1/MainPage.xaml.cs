@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BDSQLite1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +17,30 @@ namespace BDSQLite1
         public MainPage()
         {
             InitializeComponent();
+
+            var Toolbaritem = new ToolbarItem
+            {   
+                Text = "Nuevo (+)"
+            };
+
+            Toolbaritem.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new AddStudent()
+                {
+                    BindingContext = new Student()
+                });  
+            };
+
+            ToolbarItems.Add(Toolbaritem);
         }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            this.StdList.ItemsSource = await App.Database.GetStudents();
+
+        }
+
     }
 }

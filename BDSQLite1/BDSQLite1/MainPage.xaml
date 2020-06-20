@@ -4,13 +4,29 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BDSQLite1.MainPage">
+             x:Class="BDSQLite1.MainPage"
+             Visual="Material"
+             Title="Home">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Lista de Estudiantes Registrados" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" FontSize="18"></Label>
+
+            <ListView x:Name="StdList">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding stdname}" 
+                                  Detail="{Binding stdcourse}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            
+        </StackLayout>
+        
+    </ScrollView>
+   
 
 </ContentPage>

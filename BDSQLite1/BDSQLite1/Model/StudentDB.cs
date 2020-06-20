@@ -30,5 +30,23 @@ namespace BDSQLite1.Model
             return database.Table<Student>().Where(s => s.stdid == id).FirstOrDefaultAsync();
         }
 
+        //Registro de estudiantes
+        public Task<int> SaveStudent(Student stud)
+        {
+            return database.InsertAsync(stud);
+        }
+
+        //Update de estudiantes
+        public Task<int> UpdateStudent(Student stud)
+        {
+            return database.UpdateAsync(stud);
+        }
+
+        //delete de estudiantes
+        public Task<int> DeleteStudent(Student stud)
+        {
+            return database.DeleteAsync(stud);
+        }
+
     }
 }
