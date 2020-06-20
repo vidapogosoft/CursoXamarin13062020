@@ -64,7 +64,7 @@ namespace Camara1
             catch (Exception ex)
             {
 
-                await DisplayAlert("Error",ex.Message.,"Cerrar");
+                await DisplayAlert("Error",ex.Message,"Cerrar");
             }
         }
 
