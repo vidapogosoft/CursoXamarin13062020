@@ -22,5 +22,20 @@ namespace Camara1
         {
 
         }
+
+        private void BtnSubeFoto_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnGrabaVideo_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSubeVideo_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
