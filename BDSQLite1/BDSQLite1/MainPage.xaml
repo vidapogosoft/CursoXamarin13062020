@@ -13,7 +13,7 @@
             <Label Text="Lista de Estudiantes Registrados" VerticalOptions="CenterAndExpand"
                    HorizontalOptions="Center" FontSize="18"></Label>
 
-            <ListView x:Name="StdList">
+            <ListView x:Name="StdList" ItemSelected="StdList_ItemSelected">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

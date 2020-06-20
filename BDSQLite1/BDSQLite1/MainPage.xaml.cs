@@ -42,5 +42,16 @@ namespace BDSQLite1
 
         }
 
+        private async void StdList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new EditStudent()
+                {
+                    BindingContext = e.SelectedItem as Student
+                });
+            }
+
+        }
     }
 }
