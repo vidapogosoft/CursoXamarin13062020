@@ -68,19 +68,117 @@ namespace Camara1
             }
         }
 
-        private void BtnSubeFoto_Clicked(object sender, EventArgs e)
+        private async void BtnSubeFoto_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                await CrossMedia.Current.Initialize();
+
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    await DisplayAlert("Camara no habilitada", "No tiene permisos", "Cerrar");
+                    return;
+                }
+
+                //seleccionar un elemento de la galeria
+
+                var file = await CrossMedia.Current.PickPhotoAsync();
+                
+
+                if (file == null)
+                {
+                    await DisplayAlert("Camara", "No selecciono foto", "Cerrar");
+                    return;
+                }
+
+                this.Path.Text = file.AlbumPath;
+
+                this.MainImage.Source = ImageSource.FromStream(() =>
+
+                {
+                    var stream = file.GetStream();
+                    file.Dispose();
+                    return stream;
+                }
+
+                    );
+
+            }
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Error", ex.Message, "Cerrar");
+            }
 
         }
 
-        private void BtnGrabaVideo_Clicked(object sender, EventArgs e)
+        private async void BtnGrabaVideo_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                await CrossMedia.Current.Initialize();
 
+                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakeVideoSupported)
+                {
+                    await DisplayAlert("Camara no habilitada", "Revise su dispositivo", "Cerrar");
+                    return;
+                }
+
+                var file = await CrossMedia.Current.TakeVideoAsync(
+                    new StoreVideoOptions
+                    {
+                        SaveToAlbum = true
+                    });
+
+
+                if (file == null)
+                {
+                    await DisplayAlert("Camara", "No grabo video", "Cerrar");
+                    return;
+                }
+
+                this.Path.Text = file.AlbumPath;
+
+            }
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Error", ex.Message, "Cerrar");
+            }
         }
 
-        private void BtnSubeVideo_Clicked(object sender, EventArgs e)
+        private async void BtnSubeVideo_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                await CrossMedia.Current.Initialize();
 
+                if (!CrossMedia.Current.IsPickVideoSupported)
+                {
+                    await DisplayAlert("Camara no habilitada", "No tiene permisos", "Cerrar");
+                    return;
+                }
+
+                //seleccionar un elemento de la galeria
+
+                var file = await CrossMedia.Current.PickVideoAsync();
+
+
+                if (file == null)
+                {
+                    await DisplayAlert("Camara", "No selecciono video", "Cerrar");
+                    return;
+                }
+
+                this.Path.Text = file.AlbumPath;
+
+               
+            }
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Error", ex.Message, "Cerrar");
+            }
         }
     }
 }
