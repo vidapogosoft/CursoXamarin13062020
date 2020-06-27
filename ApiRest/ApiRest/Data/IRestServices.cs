@@ -12,7 +12,7 @@ namespace ApiRest.Data
 
         Task SaveTodoItem(TodoItems item, bool isnewItem);
 
-        Task DelTodoItem(string id);
+        //Task DelTodoItem(string id);
 
     }
 }

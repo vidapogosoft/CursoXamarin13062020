@@ -52,5 +52,40 @@ namespace ApiRest.Data
 
         }
 
+        public async Task SaveTodoItem(TodoItems item, bool isnewItem)
+        {
+            var uri = new Uri(string.Format(Constants.TodoItemsUrl, string.Empty));
+
+            try
+            {
+                var json = JsonConvert.SerializeObject(item);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = null;
+
+                if (isnewItem)
+                {
+                    response = await _client.PostAsync(uri,content);                
+                }
+                else
+                {
+                    response = await _client.PutAsync(uri, content);
+                }
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"Item Saved");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"Error {0}", ex.Message);
+            }
+
+
+        }
+
     }
 }
