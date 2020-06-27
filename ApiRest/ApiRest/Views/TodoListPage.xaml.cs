@@ -27,5 +27,27 @@ namespace ApiRest.Views
 
         }
 
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TodoItemPage(true)
+            {
+                BindingContext = new TodoItems
+                {
+                    ID = Guid.NewGuid().ToString()
+                }
+
+            }); ;
+
+        }
+
+        private async void lstItems_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new TodoItemPage(false)
+            {
+                BindingContext = e.SelectedItem as TodoItems
+            });
+
+
+        }
     }
 }

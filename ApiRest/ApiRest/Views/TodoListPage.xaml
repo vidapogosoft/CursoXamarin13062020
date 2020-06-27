@@ -8,7 +8,7 @@
              Title="Home">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="ADD (+)">
+        <ToolbarItem Text="ADD (+)" Clicked="ToolbarItem_Clicked">
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     
@@ -16,7 +16,7 @@
 
         <ScrollView>
             <StackLayout>
-                <ListView x:Name="lstItems" Margin="20">
+                <ListView x:Name="lstItems" Margin="20" ItemSelected="lstItems_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
