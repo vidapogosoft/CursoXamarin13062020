@@ -52,11 +52,18 @@ namespace Menu_Tab_Maps
 
         private void CLTiendas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            string Nombre;
+
             if (e.CurrentSelection.Any())
             {
-                CLTiendas.SelectedItem = null;
 
-                DisplayAlert("Colletion view", "Selecion", "Cerrar");
+                Nombre = (CLTiendas.SelectedItem as Tiendas)?.Name;
+
+
+                DisplayAlert("Colletion view", "Selecionado: " + Nombre, "Cerrar");
+
+
+                CLTiendas.SelectedItem = null;
 
             }
         }
