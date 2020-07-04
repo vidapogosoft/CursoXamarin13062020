@@ -101,6 +101,8 @@ namespace Menu_Tab_Maps
 
             GeoLocal.Pins.Add(Pin);
 
+            //GeoLocal.Pins.Count > 0
+            //GeoLocal.Pins.Remove(Pin);
         }
     }
 
