@@ -9,6 +9,7 @@ using Android.OS;
 
 using Plugin.Permissions;
 using Plugin.CurrentActivity;
+using Plugin.LocalNotifications;
 
 namespace Menu_Tab_Maps.Droid
 {
@@ -22,8 +23,11 @@ namespace Menu_Tab_Maps.Droid
 
             base.OnCreate(savedInstanceState);
 
-            //Inicializacion de mi plugin
+            //Inicializacion de mi plugin de geolocalizacion
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
+
+            //Plugin de notificaciones
+            LocalNotificationsImplementation.NotificationIconId = Resource.Mipmap.launcher_foreground;
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

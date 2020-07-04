@@ -27,7 +27,7 @@ namespace Menu_Tab_Maps
             {
                 new Menu { Page = new Home(), MenuTitle = "Home" },
                 new Menu { Page = new Cuenta(), MenuTitle = "Mi Cuenta" },
-                new Menu { Page = new Contactanos(), MenuTitle = "Contactos" },
+                new Menu { Page = new Contactos(), MenuTitle = "Contactos" },
                 new Menu { Page = new Ubicanos(), MenuTitle = "Nuestras Tiendas" }
 
             };

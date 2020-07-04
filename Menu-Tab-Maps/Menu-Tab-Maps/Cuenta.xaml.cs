@@ -11,6 +11,8 @@ using Plugin.Geolocator;
 using Plugin.Geolocator.Abstractions;
 using Xamarin.Forms.Maps;
 
+using Plugin.LocalNotifications;
+
 namespace Menu_Tab_Maps
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -22,6 +24,14 @@ namespace Menu_Tab_Maps
             InitialPluginLocator();
         }
 
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            CrossLocalNotifications.Current.Show("No Olvides","Registrado tus datos pordras obtener cientos de beneficios.",
+                0,DateTime.Now.AddSeconds(5));
+        }
 
         private async void InitialPluginLocator()
         {

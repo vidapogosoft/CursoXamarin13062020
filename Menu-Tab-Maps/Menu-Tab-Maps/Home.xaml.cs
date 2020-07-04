@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Plugin.LocalNotifications;
+
 using Menu_Tab_Maps.Model;
 
 namespace Menu_Tab_Maps
@@ -24,6 +26,8 @@ namespace Menu_Tab_Maps
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            CrossLocalNotifications.Current.Show("Bienvenido","Le damos las gracias por usar nuestra app.");
 
             Alltiendas = new List<Tiendas>()
             {

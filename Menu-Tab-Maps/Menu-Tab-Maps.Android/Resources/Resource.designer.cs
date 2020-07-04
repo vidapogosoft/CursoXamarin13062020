@@ -25,6 +25,7 @@ namespace Menu_Tab_Maps.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::Menu_Tab_Maps.Droid.Resource.Drawable.plugin_lc_smallicon;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::Menu_Tab_Maps.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::Menu_Tab_Maps.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::Menu_Tab_Maps.Droid.Resource.Attribute.font;
@@ -11227,13 +11228,16 @@ namespace Menu_Tab_Maps.Droid
 			public const int notify_panel_notification_icon_bg = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int SS1 = 2131165322;
+			public const int plugin_lc_smallicon = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int tooltip_frame_dark = 2131165323;
+			public const int SS1 = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int tooltip_frame_light = 2131165324;
+			public const int tooltip_frame_dark = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int tooltip_frame_light = 2131165325;
 			
 			static Drawable()
 			{
