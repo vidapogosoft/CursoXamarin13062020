@@ -11,7 +11,7 @@ namespace TodoASMX
         {
             get
             {
-                var defaultUrl = "http://186.68.44.10:9090/asmxservices/TodoServices.asmx";
+                var defaultUrl = "http://186.68.44.11:9090/asmxservices/TodoServices.asmx";
 
                 return defaultUrl;
 
