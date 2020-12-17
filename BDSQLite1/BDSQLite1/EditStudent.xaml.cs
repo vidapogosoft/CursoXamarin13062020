@@ -63,7 +63,6 @@ namespace BDSQLite1
 
                 }
 
-
             }
             catch (Exception ex)
             {

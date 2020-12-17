@@ -38,7 +38,7 @@ namespace Menu_Tab_Maps
             {
                 Type = PinType.Place,
                 Position = pos,
-                Label = "Curso de XAMRIN SIPECOM"
+                Label = "Curso de XAMRIN"
             };
 
             this.MapaGeo.Pins.Add(pin);

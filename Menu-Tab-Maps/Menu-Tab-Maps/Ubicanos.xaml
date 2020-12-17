@@ -13,7 +13,7 @@
 
         <StackLayout>
 
-            <Map:Map x:Name="MapaGeo" MapType="Street" HeightRequest="700" 
+            <Map:Map x:Name="MapaGeo" MapType="Satellite" HeightRequest="700" 
                      WidthRequest="400"></Map:Map>
             
         </StackLayout>
